@@ -28,15 +28,15 @@ const UserCard = ({ user }) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl rounded-2xl overflow-hidden">
 
-      <figure className="h-110 bg-gray-200 flex items-center justify-center">
-        <img
-          src={photoURL ? photoURL : defaultImage}
-          alt="profile"
-          className="w-full h-full object-cover"
-        />
-      </figure>
+      <figure className="h-78 overflow-hidden flex items-center justify-center">
+    <img
+    src={photoURL ? photoURL : defaultImage}
+    alt="profile"
+    className="w-full h-full object-cover object-top"
+    />
+    </figure>
 
-      <div className="card-body p-6">
+      <div className="card-body p-4">
         <h2 className="card-title text-xl font-bold">
           {firstName} {lastName}
         </h2>

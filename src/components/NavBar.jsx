@@ -36,7 +36,7 @@ const Navbar = () => {
   className="navbar shadow-sm bg-gray-900"
 >
     <div className="flex-1">
-      <Link to="/" className="btn btn-ghost text-3xl hover:bg-indigo-500  p-8" >🌊DevTinder</Link>
+      <Link to="/" className="btn btn-ghost text-2xl hover:bg-indigo-500  p-5" >🌊DevTinder</Link>
     </div>{user && (
       <div className="flex items-center gap-3">
         <div className="form-control capitalize" >{user.firstName}</div>

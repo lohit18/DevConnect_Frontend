@@ -5,6 +5,7 @@ import axios from "axios";
 
 const UserProfile = ({ user }) => {
   const { _id, firstName, lastName, photoURL, age, gender, skills } = user;
+  
   const dispatch = useDispatch();
   const defaultImage =`https://api.dicebear.com/7.x/pixel-art-neutral/svg?seed=terminal-${firstName}`;
 
@@ -28,13 +29,13 @@ const UserProfile = ({ user }) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl rounded-2xl overflow-hidden">
 
-      <figure className="h-110 bg-gray-200 flex items-center justify-center">
-        <img
-          src={photoURL ? photoURL : defaultImage}
-          alt="profile"
-          className="w-full h-full object-cover"
-        />
-      </figure>
+      <figure className="h-88 overflow-hidden flex items-center justify-center">
+    <img
+    src={photoURL ? photoURL : defaultImage}
+    alt="profile"
+    className="w-full h-full object-cover object-top"
+    />
+    </figure>
 
       <div className="card-body p-6">
         <h2 className="card-title text-xl font-bold">
@@ -46,13 +47,7 @@ const UserProfile = ({ user }) => {
         </p>
 
         <p className="flex flex-wrap gap-2 mt-4">
-          Skills : {skills && skills.length > 0 ? (
-            skills.map((skill, index) => (
-              <span key={index}>
-                {skill}
-              </span>
-            ))
-          ) : null}
+           {skills}
         </p>
       </div>
     </div>
